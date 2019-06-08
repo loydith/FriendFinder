@@ -21,6 +21,7 @@ $("#submit").on("click", function(event){
                     $("#q10").val() === "empty") {
 			validateForm = false;
         }
+        return validateForm;
     }
 		if(form()) {
 			var newUser = {
@@ -40,11 +41,9 @@ $("#submit").on("click", function(event){
             
                          ]
             };
-         
-    
             // post
             $.post("/api/friends", newUser, function (data) {
-                // console.log(data);
+                console.log(data);
                 $("#matchName").text(data.name);
                 $("#matchPhoto").attr("src", data.photo);
             });
