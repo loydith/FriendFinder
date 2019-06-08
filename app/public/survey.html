@@ -26,36 +26,39 @@
         <!-- start form -->
           <div class="card">
                 <div class="card-header">
-                <h2> <strong> About You</strong></h2>
+                <h2> About You</h2>
                 </div>
                <!-- Form about you -->
-                <form>
-                    <div class="form-group">
-                        <label for="your-name"> Your Name (required)</label>
-                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
-                            placeholder="Enter your name">
+               <div class="card-body">
+                <form role="form" >
+                    <div class="form-group" >
+                        <label for="your-name" > Your Name (required)</label>
+                        <input type="text" class="form-control" id="name">
                     </div>
                     <!--  -->
                     Link to Photo Image (required)
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="size">
                         <div class="custom-file">
                           <label class="custom-file-label" for="photo-link"> </label>
-                          <input type="file" class="custom-file-input" id="photo" placeholder="Enter link to photo">
+                          <input type="file" class="custom-file-input" id="photo">
                         </div>
                       </div>
                 </form>
+              </div>
         </div>
         <br>
         <!-- End about you -->
         <div class="card">
                 <div class="card-header">
-                        <h2> <strong> Questionary</strong></h2>
+                        <h2> Questionary</h2>
                 </div>
                 <!-- make two columns for the questions -->
                 <div class="container">
                     <div class="row">
                         <div class="col-6">
+                          
                 <!-- question1 -->
+                <div class="card-body">
                   <h3> 1. Your mind is always buzzing with unexplored ideas and plans.</h3>
                   <div class="input-group mb-3">
                     <select class="custom-select" id="q1">
@@ -83,6 +86,7 @@
                             </select>
                             
                           </div>
+                
                           <br>
                 <!-- question3 -->
                 
@@ -124,15 +128,17 @@
                               <option value="3">3</option>
                               <option value="4">4</option>
                               <option value="5">5 (Strongly Agree)</option>
-                            </select>
-                            
-                          </div>
-                          <br>
+                            </select>      
+                      </div>
+                      <br>
+                </div>
+                        
                  </div>
                  <!-- make a column -->
                  
                             <div class="col-6">
                 <!-- question 6 -->
+              <div class="card-body">
                     <h3> 6. It is often difficult for you to relate to other people’s feelings.</h3>
                     <div class="input-group mb-3">
                             <select class="custom-select" id="q6">
@@ -203,21 +209,41 @@
                           </div>
                           <br>
                         </div>
+                            
+                        </div>
                     </div>
                  </div>
                 </div>
                 <br>
 
                 <!-- make the button -->
-                    <button class="btn btn-primary btn-lg btn-block" type="submit" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit
+                    <button class="btn btn-lg btn-block" type="submit" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit
                     </button>
                     <br>
-            
+            <!-- add the pop up after complited the survey -->
+            <!-- Modal after survey completion -->
+                <div id="bestFriendModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h3 class="modal-title">Best Match</h1>
+                        </div>
+                        <div class="modal-body">
+                          <h2 id="matchName"></h2>
+                          <img id="matchPhoto" src="#" alt="250">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
                 <!-- make the footer -->
                 <footer class="footer">
                     <div class="container">
-                      <p><a href="/api/survey">API Friends List</a> | <a href="#">GitHub Repo</a>
+                      <p><a href="/api/friends">API Friends List</a> | <a href="#">GitHub Repo</a>
                     </div>
                   </footer>
             </div>
