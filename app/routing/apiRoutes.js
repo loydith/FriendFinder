@@ -43,7 +43,8 @@ module.exports = function(app){
     // push the new friend
     friends.push(addFriend);
     // back to browser 
-    res.json(friends[startFriend]);
+    console.log("Friends: " + friends);
+    res.json(friends);
 
     });
 
